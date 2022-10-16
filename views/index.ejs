@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+     <head>
+          <title><%= title %></title>
+          <link rel="stylesheet" href="/stylesheets/style.css" />
+     </head>
+     <body>
+          <a href="/new">New message</a>
+          <h1><%=title%></h1>
+          <ul class="messages">
+               <% for(const msg of messages) {%>
+               <li>
+                    <section class="message-card">
+                         <div class="message-date">
+                              <!-- prettier-ignore -->
+                              <sub><%=format(msg.added, "eeee, dd.MMMM @ HH:mm")%></sub>
+                         </div>
+                         <h2 class="message-username">
+                              <strong><%=msg.user%></strong>
+                         </h2>
+                         <p class="message-body"><%=msg.text%></p>
+                    </section>
+               </li>
+               <% } %>
+          </ul>
+     </body>
 </html>
