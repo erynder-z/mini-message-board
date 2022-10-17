@@ -1,8 +1,71 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+     padding: 50px;
+     font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+     background-color: #eee8d5;
 }
 
 a {
-  color: #00B7FF;
+     color: #00b7ff;
+}
+
+ul {
+     list-style: none;
+     padding: 0;
+}
+
+.messages {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 1rem;
+}
+
+.message-card {
+     width: 12rem;
+     height: 17rem;
+     border-radius: 1%;
+     border: solid 1px black;
+     display: grid;
+     grid-template-rows: 1fr 1fr 2fr;
+     padding: 1rem;
+     background-color: #fdf6e3;
+}
+
+.message-date {
+     text-align: right;
+}
+
+.message-username {
+     display: flex;
+     align-items: flex-end;
+     margin-bottom: 0;
+     color: #002b36;
+}
+
+.message-body {
+     color: #073642;
+     display: flex;
+     width: 100%;
+     height: 100%;
+     word-break: break-all;
+     overflow-x: auto;
+}
+
+.message-color {
+     height: 1rem;
+     width: 100%;
+}
+
+.msg-form {
+     display: flex;
+     flex-direction: column;
+     width: 15rem;
+}
+
+.submitBtn {
+     border: none;
+     height: 2rem;
+     width: 100%;
+     background-color: #cb4b16;
+     color: #fdf6e3;
+     margin-bottom: 1rem;
 }
