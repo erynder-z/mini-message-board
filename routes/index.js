@@ -1,5 +1,5 @@
 const express = require('express');
-const formatISO = require('date-fns/format');
+const distanceInWords = require('date-fns/formatDistanceToNow');
 const router = express.Router();
 
 const colors = [
@@ -33,7 +33,7 @@ router.get('/', function (req, res) {
      res.render('index', {
           title: 'Mini Message Board',
           messages: messages,
-          formatISO: formatISO,
+          distanceInWords: distanceInWords,
      });
 });
 

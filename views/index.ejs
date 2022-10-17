@@ -13,7 +13,7 @@
                     <section class="message-card">
                          <div class="message-date">
                               <!-- prettier-ignore -->
-                              <sub><%=formatISO(msg.added, "eeee, dd.MMMM @ HH:mm")%></sub>
+                              <sub><%=distanceInWords(msg.added,  {addSuffix: true})%></sub>
                          </div>
                          <h2 class="message-username">
                               <strong><%=msg.user%></strong>
