@@ -29,7 +29,7 @@ const messages = [
 ];
 
 /* GET board index */
-router.get('/', function (req, res, next) {
+router.get('/', function (req, res) {
      res.render('index', {
           title: 'Mini Message Board',
           messages: messages,
@@ -38,12 +38,12 @@ router.get('/', function (req, res, next) {
 });
 
 /* GET new message form */
-router.get('/new', function (req, res, next) {
+router.get('/new', function (req, res) {
      res.render('form');
 });
 
 /* POST new message */
-router.post('/new', function (req, res, next) {
+router.post('/new', function (req, res) {
      messages.push({
           text: req.body.message,
           user: req.body.author,
